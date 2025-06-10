@@ -1,8 +1,8 @@
 from django.db.models import fields
 from rest_framework import serializers
-from .models import student
+from .models import Student
 
-class studentSerializer(serializers.ModelSerializer):
+class StudentSerializer(serializers.ModelSerializer):
     class Meta:
-        model = student
-        fields = ('name', 'surname', 'student_id', 'marks')
+        model = Student
+        fields = ['id','name', 'surname', 'student_id', 'marks']
